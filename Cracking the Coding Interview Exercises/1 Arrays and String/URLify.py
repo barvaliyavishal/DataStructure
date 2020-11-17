@@ -15,5 +15,4 @@ def URLify(str):
         else:
             mystr+="%20"
     return mystr;
-
 print(URLify("vishal barvaliya patel"))
