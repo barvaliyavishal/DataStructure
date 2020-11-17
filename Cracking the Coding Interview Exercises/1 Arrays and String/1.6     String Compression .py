@@ -5,7 +5,6 @@ the original string. You can assume the string has only uppercase and lowercase 
 
 
 def stringCompression(str1):
-    flag = False
     char = ""
     s1 = ""
     counter = 0
@@ -22,13 +21,10 @@ def stringCompression(str1):
         elif str1[i] == char:
             counter += 1
         elif str1[i] != char:
-            if counter > 2:
-                flag = True
-
             s1 = s1 + char + str(counter)
             counter = 1
             char = str1[i]
-    if flag:
+    if len(s1) < len(str1):
         return s1
     return str1
 
