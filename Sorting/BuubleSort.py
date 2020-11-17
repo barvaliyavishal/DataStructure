@@ -10,6 +10,7 @@ def BubbleSort(arr):
                 arr[i+1]=temp;
         stop-=1;
     return arr;
-
 print(BubbleSort([9,3,2,4,6,1,8,7,10,5]))
+
+
 
