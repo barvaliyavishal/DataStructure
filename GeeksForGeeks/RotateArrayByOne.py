@@ -1,34 +1,25 @@
-'''Given an array, cyclically rotate an array by one.
+'''Initialize:
+    max_so_far = 0
+    max_ending_here = 0
 
-Input:
-The first line of input contains an integer T denoting the number of test cases.
-Then T test cases follow.
-Each test case contains an integer n denoting the size of the array.
-Then following line contains 'n' integers forming the array.
+Loop for each element of the array
+  (a) max_ending_here = max_ending_here + a[i]
+  (b) if(max_so_far < max_ending_here)
+            max_so_far = max_ending_here
+  (c) if(max_ending_here < 0)
+            max_ending_here = 0
+return max_so_far'''
 
-Link for this problem is Given below:
+def contiguousMaxSubArray(arr):
+    maxs=0;
+    maxe=0;
 
-https://practice.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one/0#
-
-'''
-def rotateAnArray(n,arr):
-    first = arr[len(arr)-1]
-    for i in range(len(arr)-1,-1,-1):
-        arr[i]=arr[i-1];
-    arr[0]=first;
     for i in arr:
-        print(i,end=" ")
+        maxe+=i;
+        if maxs<maxe:
+            maxs=maxe;
+        if maxe<0:
+            maxe=0;
+    return maxs;
 
-t = int(input())
-while t > 0 :
-    t-=1;
-    n=int(input())
-    arr=[];
-    for i in range(n):
-        temp=input()
-        arr.append(temp)
-    rotateAnArray(n,arr)
-
-
-    
-    
+print(contiguousMaxSubArray([-2, -3, 4, -1, -2, 1, 5, -3]))
