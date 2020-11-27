@@ -35,3 +35,9 @@ def getPairsCount(arr, n, k):
                 temp[j]=1;
 
     return res;
+
+arr = [1,1,1,1];
+n=4;
+k=2;
+
+print(getPairsCount(arr,n,k));
