@@ -1,5 +1,6 @@
 def InsertionSort(arr):
     for i in range(len(arr)-1):
+
         if arr[i] > arr[i+1]:
             for j in range(i,-1,-1):
                 if arr[j] > arr[j+1]:
