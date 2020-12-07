@@ -12,7 +12,6 @@ class Node:
             total += 1
         return total
 
-
     # Insert element at last
     def insertAtLast(self, val, h):
         new = Node(val)
@@ -24,14 +23,14 @@ class Node:
                 temp = temp.next
             temp.next = new
 
-    #remove specific element
+    # remove specific element
     def remove(self, val, h):
         if h.data == None:
             return h
         if h.data == val and h.next == None:
             h.data = None
             return h
-        if h.data == val and h.next != None:
+        if h.data == val and h.next:
             return h.next
         temp = h
         while temp.next.data != val:
@@ -39,8 +38,7 @@ class Node:
         temp.next = temp.next.next
         return h
 
-
-    #Print Element
+    # Print Element
     def show(self, h):
         temp = h
         while temp:
@@ -53,11 +51,10 @@ class Node:
         new.next = h
         return new
 
-
-    #print element in reverse manner
+    # print element in reverse manner
     def printReverse(self, h):
         if h.data == None:
-            return;
+            return
         self.printReverse(h.next)
         print(h.data)
 
