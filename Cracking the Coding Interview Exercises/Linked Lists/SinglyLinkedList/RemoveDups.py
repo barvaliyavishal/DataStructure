@@ -9,7 +9,7 @@ class RemoveDuplicates:
 
         current = h
         seen = set([current.data])
-        
+
         while current.next:
             if current.next.data in seen:
                 current.next = current.next.next
