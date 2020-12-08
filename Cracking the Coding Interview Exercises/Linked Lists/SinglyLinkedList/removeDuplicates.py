@@ -2,7 +2,6 @@ from LinkedList import LinkedList
 
 
 class RemoveDuplicates:
-
     # Remove duplicates Using O(n^2)
     def removeDuplicates(self, head):
         if head.data is None:
