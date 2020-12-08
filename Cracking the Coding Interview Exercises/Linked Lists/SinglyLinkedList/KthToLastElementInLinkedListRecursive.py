@@ -1,5 +1,4 @@
 from LinkedList import LinkedList
-
 class KthToLastElement:
     def kthlast(self, k, h):
         if h is None:
@@ -11,7 +10,6 @@ class KthToLastElement:
 
 
 o = LinkedList()
-
 o.add(1)
 o.add(2)
 o.add(3)
@@ -19,4 +17,4 @@ o.add(4)
 o.add(5)
 o.add(6)
 o.add(7)
-res= KthToLastElement().kthlast(6, o.head)
+res = KthToLastElement().kthlast(6, o.head)
