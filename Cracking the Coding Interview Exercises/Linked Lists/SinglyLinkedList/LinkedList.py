@@ -24,9 +24,9 @@ class LinkedList:
 
     # show all elements of Linked List
     def show(self):
-        temp=self.head
+        temp = self.head
         while temp:
-            print(temp.data)
+            print(temp.data," -> ",end="")
             temp = temp.next
 
     # Remove specific element from linked list
@@ -51,8 +51,3 @@ class LinkedList:
     def length(self):
         return self.len
 
-
-obj = LinkedList()
-for i in range(5):
-    obj.add(i)
-obj.show()
