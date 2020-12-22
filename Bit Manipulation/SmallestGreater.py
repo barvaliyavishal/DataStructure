@@ -9,7 +9,3 @@ def smallestGreater(n):
         temp = temp >> 1
     return n+res
 print(smallestGreater(5))
-t = 5
-print(t)
-t = t ^ 1
-print(t)
