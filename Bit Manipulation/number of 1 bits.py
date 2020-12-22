@@ -13,3 +13,4 @@ def numOfOnes(n: int) -> int:
         res += 1
         temp = temp & temp-1
     return res
+print(numOfOnes(7))
