@@ -7,4 +7,4 @@ def uniqueNumber(arr):
     for i in arr:
         res = res ^ i
     return res
-print(uniqueNumber([2,4,6,3,4,6,2]))
+print(uniqueNumber([2,3,6,4,2,3,6,6,3,2]))
