@@ -1,3 +1,12 @@
+'''
+
+Hello there i created this game from my real life experiences
+just play it you will get amazed
+
+i really worked hard to create this amazing game
+'''
+
+
 arr = []
 for i in range(27):
     arr.append(i+1)
@@ -83,7 +92,7 @@ for i in range(3):
                 ind += 1
             break
         else:
-            print("enter Valid input please!!!");
+            print("enter Valid input please!!!")
 print()
 print()
 print("***********************************************")
