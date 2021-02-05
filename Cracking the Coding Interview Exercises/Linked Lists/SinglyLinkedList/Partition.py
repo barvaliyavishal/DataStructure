@@ -54,4 +54,3 @@ obj.add(8)
 h = obj.head
 partition(h, 5)
 obj.show()
-
