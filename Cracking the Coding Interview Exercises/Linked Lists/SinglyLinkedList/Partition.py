@@ -38,7 +38,7 @@ def partition(head : LinkedList,mid):
                 s1 = s1.next
 
         temp = temp.next
-
+    s1.next = None
     f1.next = second
     obj.head = first
 
