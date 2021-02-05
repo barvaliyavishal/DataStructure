@@ -55,5 +55,5 @@ obj2.add(5)
 h = Sumlist(obj1.head,obj2.head)
 temp = h
 while temp:
-    print(f"{temp.data}  -> ",end="")
+    print(f"{temp.data}  -> ", end="")
     temp = temp.next
