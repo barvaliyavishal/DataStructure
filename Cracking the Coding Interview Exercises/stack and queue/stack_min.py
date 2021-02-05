@@ -7,4 +7,4 @@ class Stack:
     def push(self, val):
         self.top+=1
         if self.top < len(self.arr):
-            self.arr[self.top] = 
+            self.arr[self.top] = 0
