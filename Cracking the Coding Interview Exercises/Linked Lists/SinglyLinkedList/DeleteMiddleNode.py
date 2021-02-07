@@ -12,8 +12,9 @@ Result: nothing is returned, but the new linked list looks like a ->b->d->e->f
 
 
 def delete_middle_node(node):
-    node.data = node.next.data
-    node.next = node.next.next
+    if node.next:
+        node.data = node.next.data
+        node.next = node.next.next
 
 
 obj1 = LinkedList()
