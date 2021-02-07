@@ -1,5 +1,6 @@
 from LinkedList import LinkedList
 
+
 def is_palindrome(head):
     t = head
     flag = True
@@ -23,12 +24,12 @@ def is_palindrome(head):
 obj1 = LinkedList()
 
 obj1.add("e")
+obj1.add("a")
+obj1.add("b")
+obj1.add("c")
+obj1.add("b")
+obj1.add("a")
 obj1.add("e")
-# obj1.add("b")
-# obj1.add("c")
-# obj1.add("b")
-# obj1.add("a")
-# obj1.add("e")
 
 
 res = is_palindrome(obj1.head)
