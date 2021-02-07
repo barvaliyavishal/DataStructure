@@ -26,7 +26,10 @@ class LinkedList:
     def show(self):
         temp = self.head
         while temp:
-            print(temp.data," -> ",end="")
+            if temp.next:
+                print(temp.data," -> ",end="")
+            else:
+                print(temp.data)
             temp = temp.next
 
     # Remove specific element from linked list
