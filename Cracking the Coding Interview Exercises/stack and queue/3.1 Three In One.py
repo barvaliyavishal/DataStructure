@@ -176,5 +176,5 @@ while flag:
     else:
         v = obj.top(int(input("enter stack number for top : ")))
         print(v)
-    print(obj.stack)
+    
 
