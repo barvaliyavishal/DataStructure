@@ -98,6 +98,7 @@ class ThreeInOne:
             print("Stack Is Empty")
             return
         else:
+            res = self.stack[self.end[sn]]
             if sn == 0:
                 if self.start[1] != -1 and self.start[2] != -1:
                     self.shift_left(self.start[1], self.end[2])
@@ -158,6 +159,7 @@ class ThreeInOne:
                     self.start[2] = self.end[2] = -1
                 else:
                     self.end[2] -= 1
+            return res
 
     def top(self, sn):
         return self.stack[self.end[sn]]
@@ -172,9 +174,10 @@ while flag:
     if p == '1':
         obj.push(int(input("stack Number : ")), int(input("val : ")))
     elif p == '2':
-        obj.pop(int(input("Enter Stack number to pop")))
+        res = obj.pop(int(input("Enter Stack number to pop")))
+        print(res)
     else:
-        v = obj.top(int(input("enter stack number for top : ")))
-        print(v)
-    
+        res = obj.top(int(input("enter stack number for top : ")))
+        print(res)
+
 
