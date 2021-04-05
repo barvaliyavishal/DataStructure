@@ -7,7 +7,7 @@ class Solution:
         for i in range(0, N):
             if S[i].isdigit():
                 size = size * int(S[i])
-            else: 
+            else:
                 size += 1
 
         # get the K-th letter
