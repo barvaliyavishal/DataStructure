@@ -1,70 +1,48 @@
 class MinStack:
 
     def __init__(self):
-        self.stack = []
-        self.min = []
-        self.topmin = -1
-        self.top = -1
+        """
+        initialize your data structure here.
+        """
+        self.s = []
+        self.m = None
 
-    def minval(self,val):
-        if self.topmin + 1 == len(self.min):
-            if self.topmin >= 0 and self.min[self.topmin] >= val:
-                self.min.append(val)
-                self.topmin += 1
-            elif self.topmin == -1:
-                self.topmin += 1
-                self.min.append(val)
+    def push(self, x):
+        """
+        :type x: int
+        :rtype: None
+        """
+        if self.m is None:
+            self.m = x
+
+        if x < self.m:
+            tmp = x
+            x = 2 * x - self.m
+            self.m = tmp
+
+        self.s.append(x)
+
+    def pop(self):
+        """
+        :rtype: None
+        """
+        if self.s[-1] < self.m:
+            self.m = 2 * self.m - self.s[-1]
+        self.s = self.s[:-1]
+        if not self.s:
+            self.m = None
+
+    def top(self):
+        """
+        :rtype: int
+        """
+        if self.s[-1] < self.m:
+            return self.m
         else:
-            if self.topmin == -1:
-                self.topmin += 1
-                self.min[self.topmin] = val
-            else:
-                if self.min[self.topmin] >= val:
-                    self.topmin += 1
-                    self.stack[self.topmin] = val
+            return self.s[-1]
 
-    def push(self, x: int) -> None:
-        if self.top+1 == len(self.stack):
-            self.stack.append(x)
-            self.top += 1
-        else:
-            self.top += 1
-            self.stack[self.top] = x
-        self.minval(x)
-
-    def pop(self) -> None:
-        if self.top >= 0:
-            if self.stack[self.top] == self.min[self.topmin]:
-                self.top -=1
-                self.topmin -= 1
-            else:
-                self.top -= 1
-
-    def topp(self):
-        if self.top != -1:
-            return self.stack[self.top]
-
-    def getMin(self) -> int:
-        if self.topmin != -1:
-            return self.min[self.topmin]
-
-
-obj = MinStack()
-flag = True
-while flag:
-    inp = int(input("1 for push "
-                    " 2 for pop "
-                    "3 for get min "
-                    "4 for top 5 for exit " ))
-    if inp == 1:
-        obj.push(int(input("enter value to push")))
-    elif inp == 2:
-        print(obj.pop())
-    elif inp == 3:
-        print(obj.getMin())
-    elif inp == 4:
-        print(obj.topp())
-    else:
-        flag = False
-    print(obj.stack)
-    print(obj.min)
+    def getMin(self):
+        """
+        :rtype: int
+        """
+        return self.m
